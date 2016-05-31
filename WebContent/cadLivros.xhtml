@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+	<h:form enctype="multipart/form-data">
+		<h:outputText value="Código" /><br/>
+		<h:inputText value="#{livrosBean.livro.codigo}" /><br/>
+
+		<h:outputText value="Título" /><br/>
+		<h:inputText value="#{livrosBean.livro.titulo}" /><br/>
+		
+		<h:outputText value="Autor" /><br/>
+		<h:inputText value="#{livrosBean.livro.autor}" /><br/>
+		
+		<h:outputText value="Data Publicação" /><br/>
+		<h:inputText value="#{livrosBean.livro.dataPublicacao}" >
+			<f:convertDateTime pattern="dd/MM/yyyy"/>
+		</h:inputText>
+		<br/>
+
+		<h:outputText value="Preço" /><br/>
+		<h:inputText value="#{livrosBean.livro.preco}" /><br/>
+		<h:outputText value="Figura" /><br/>
+		<h:inputFile value="#{livrosBean.figura}"/>
+		<br/>
+		
+		<h:commandButton value="Incluir" action="#{livrosBean.incluirLivro()}" />
+	</h:form>
+</h:body>
+</html>

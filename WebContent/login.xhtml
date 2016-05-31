@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Insert title here</title>
+</h:head>
+<h:body>
+	<h:outputText value="Usuário:"/><br/>
+	<h:inputText id="usuario" value="#{usuariosBean.usuario.nome}"/><br/>
+	
+	<h:outputText value="Senha:"/><br/>
+	<h:inputText id="senha" value="#{usuariosBean.usuario.senha}"/><br/>
+	<br/>
+	<h:commandButton value="Logar" action="#{usuariosBean.Login()}"/>
+</h:body>
+</html>

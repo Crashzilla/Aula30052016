@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://java.sun.com/jsf/facelets"
+xmlns:h="http://java.sun.com/jsf/html"
+xmlns:f="http://java.sun.com/jsf/core">
+<h:head>
+	<title>Insert title here</title>
+	<h:outputStylesheet library="css" name="estilos.css"></h:outputStylesheet>
+</h:head>
+<h:body>
+	<h:form>
+		<h:dataTable value="#{livrosBean.listaLivros}"
+ 						var="livro"
+ 						styleClass="tabela"
+ 						headerClass="cabecalho"
+ 						columnClasses="col1,col2,col3,col4">
+			<h:column>
+				<f:facet name="header">
+					CÓDIGO
+				</f:facet>
+				<h:outputText value="#{livro.codigo}" />
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					TÍTULO
+				</f:facet>
+				<h:outputText value="#{livro.titulo}" />
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					AUTOR
+				</f:facet>
+				<h:outputText value="#{livro.autor}" />
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					DATA PUBLICAÇÃO
+				</f:facet>
+				<h:outputText value="#{livro.dataPublicacao}" >
+					<f:convertDateTime pattern="dd/MM/yyyy" />
+				</h:outputText>
+			</h:column>
+
+			<h:column>
+				<f:facet name="header">
+					IMAGEM
+				</f:facet>
+				<h:graphicImage
+					value="imagem?id=#{livro.codigo}"
+					width="150" />
+			</h:column>
+		</h:dataTable>
+	</h:form>
+</h:body>
+</html>

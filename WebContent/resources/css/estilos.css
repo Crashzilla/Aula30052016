@@ -1,0 +1,41 @@
+/* Estilos para a tabela */
+.tabela { 
+	border: 1px solid lightgray;
+}
+
+.teste {
+	color: red;
+}
+
+/* Estilos para o cabeçalho */
+.cabecalho {
+	text-align: center;
+	font: 12px Verdana;
+	font-weight: bold;
+	background: rgb(128,128,255);
+}
+
+/* Colunas */
+.col1 {
+	text-align: center;
+	font: 12px Arial, sans-serif;
+	background: rgb(187,187,187);
+}
+
+.col2 {
+	font: 12px Arial, sans-serif;
+	text-align: center;
+	background: rgb(213,213,170);
+}
+
+.col3 {
+	font: 12px Arial, sans-serif;
+	text-align: center;
+	background: rgb(222,188,188);
+}
+
+.col4 {
+	font: 12px Arial, sans-serif;
+	text-align: center;
+	background: rgb(255,203,151);
+}
